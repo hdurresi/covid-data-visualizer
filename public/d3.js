@@ -1,5 +1,9 @@
 //d3 JavaScript
 
+fetch("https://api.covid19api.com/summary")
+    .then((data) => data.json())
+    .then((data) => console.log(data))
+
 const canvas = d3.select(".canva");
 canvas.attr("width", "500").attr("height", "500")
 const svg = canvas.append("svg")
