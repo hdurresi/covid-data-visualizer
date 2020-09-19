@@ -12,3 +12,7 @@ code {
     monospace;
 }
 
+header {
+  /*height: 56px;*/
+  min-height: 6.2vh;
+}
