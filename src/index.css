@@ -16,3 +16,9 @@ header {
   /*height: 56px;*/
   min-height: 6.2vh;
 }
+
+.tables-container{
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+}

@@ -80,13 +80,12 @@ class Tables extends React.Component{
     }
 
     render(){
-        console.log(this.state)
         return(
             <div className = "tables-container">
                 <h1>COVID Tables</h1>
                 <label>Please Select a Country to view data for:  </label>
-                <select name = "countries" id = "countries" onChange = {this.handleChange}>
-                    <option value = "na" selected = {this.state.current ==='na'?"selected":""}>Select a Country</option>
+                <select name = "countries" id = "countries" onChange = {this.handleChange} className = "selectpicker">
+                    <option value = "na" selected = {this.state.current ==='na'?"selected":""}>Select a Country             </option>
                     <option value = "global" selected = {this.state.current === 'global'?"selected":""}>Global</option>
                     {
                         this.state.countries.Countries.map((data)=>{
@@ -95,7 +94,7 @@ class Tables extends React.Component{
                     }
                 </select>
                 <div className = "table-country">
-                    <table style = {this.state.current == 'na'?{display: "none"}:{display:"block"}} className = "table">
+                    <table style = {this.state.current === 'na'?{display: "none"}:{display:"block"}} className = "table">
                         <tr>
                             <th>Country</th>
                             <th>Date</th>
